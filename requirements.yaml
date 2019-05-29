@@ -1,0 +1,9 @@
+dependencies:
+- name: open-ocr-api
+  version: 0.1.0
+  repository: file://./charts/open-ocr-api
+  condition: open-ocr-api.enabled
+- name: open-ocr-worker
+  version: 0.1.0
+  repository: file://./charts/open-ocr-worker
+  condition: open-ocr-worker.enabled
