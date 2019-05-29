@@ -7,7 +7,8 @@ metadata:
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
-    name: {{ include "open-ocr-worker.name" . }}
+    app.kubernetes.io/name: {{ include "open-ocr-worker.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
@@ -26,7 +27,7 @@ spec:
             - name: RABBITMQ_USERNAME
               value: {{default "admin" .Values.rabbitmq.username}}
             - name: RABBITMQ_PASSWORD
-              value: {{default "admin" .Values.rabbitmq.pasword}}
+              value: {{default "admin" .Values.rabbitmq.password}}
             - name: RABBITMQ_HOST
               value: {{default "rabbitmq-service" .Values.rabbitmq.host}}
             - name: RABBITMQ_PORT
