@@ -48,3 +48,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+rabbitmq:
+  username: admin
+  password: admin
+  host: rabbitmq-service
+  port: 5672
