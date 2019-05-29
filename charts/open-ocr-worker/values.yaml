@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: tleyden5iwx/open-ocr
+  repository: astamia/open-ocr
   tag: latest
   pullPolicy: IfNotPresent
 
