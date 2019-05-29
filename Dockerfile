@@ -17,7 +17,7 @@ RUN apt-get install -y \
   libleptonica-dev \
   libtesseract4 \
   libtesseract-dev \
-  tesseract-ocr
+  tesseract-ocr-all
 
 # Get language data.
 RUN apt-get install -y \
