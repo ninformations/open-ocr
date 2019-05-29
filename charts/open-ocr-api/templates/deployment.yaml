@@ -32,7 +32,7 @@ spec:
             - name: RABBITMQ_HOST
               value: {{default "rabbitmq-service" .Values.rabbitmq.host}}
             - name: RABBITMQ_PORT
-              value: {{default 5672 .Values.rabbitmq.port}}
+              value: {{default "5672" .Values.rabbitmq.port | quote}}
           command: 
             - /usr/bin/open-ocr-httpd
             - -amqp_uri=amqp://$(RABBITMQ_USERNAME):$(RABBITMQ_PASSWORD)@$(RABBITMQ_HOST):$(RABBITMQ_PORT)/
