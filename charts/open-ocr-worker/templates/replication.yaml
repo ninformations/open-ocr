@@ -15,7 +15,7 @@ spec:
       labels:
         app.kubernetes.io/name: {{ include "open-ocr-worker.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
-    spec:``
+    spec:
     {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
