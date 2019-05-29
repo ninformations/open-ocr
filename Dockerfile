@@ -19,41 +19,6 @@ RUN apt-get install -y \
   libtesseract-dev \
   tesseract-ocr-all
 
-# Get language data.
-RUN apt-get install -y \
-  tesseract-ocr-ara \
-  tesseract-ocr-bel \
-  tesseract-ocr-ben \
-  tesseract-ocr-bul \
-  tesseract-ocr-ces \
-  tesseract-ocr-dan \
-  tesseract-ocr-deu \
-  tesseract-ocr-ell \
-  tesseract-ocr-fin \
-  tesseract-ocr-fra \
-  tesseract-ocr-heb \
-  tesseract-ocr-hin \
-  tesseract-ocr-ind \
-  tesseract-ocr-isl \
-  tesseract-ocr-ita \
-  tesseract-ocr-jpn \
-  tesseract-ocr-kor \
-  tesseract-ocr-nld \
-  tesseract-ocr-nor \
-  tesseract-ocr-pol \
-  tesseract-ocr-por \
-  tesseract-ocr-ron \
-  tesseract-ocr-rus \
-  tesseract-ocr-spa \
-  tesseract-ocr-swe \
-  tesseract-ocr-tha \
-  tesseract-ocr-tur \
-  tesseract-ocr-ukr \
-  tesseract-ocr-vie \
-  tesseract-ocr-chi-sim \
-  tesseract-ocr-chi-tra \
-  tesseract-ocr-eng
-
 RUN mkdir -p $GOPATH
 
 # go get open-ocr
